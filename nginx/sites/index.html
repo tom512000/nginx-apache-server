@@ -1,6 +1,39 @@
-<h1>Bienvenue sur le serveur Nginx</h1>
-<ul>
-    <li><a href="http://site1.local:90">Site 1 (HTTP)</a></li>
-    <li><a href="http://site2.local:90">Site 2 (HTTP → HTTPS, auth)</a></li>
-    <li><a href="https://site2.local:446">Site 2 (HTTPS sécurisé)</a></li>
-</ul>
+<!DOCTYPE html>
+<html lang="fr" class="h-full">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Serveur Nginx</title>
+</head>
+
+<body class="h-full flex justify-center items-center bg-gray-950">
+    <div class="flex flex-col ml-40">
+        <h1 class=" text-5xl font-['Lexend'] font-bold text-white">
+            Bienvenue sur
+            <span class="text-[#C4203D]">Nginx</span>
+        </h1>
+        <a href="http://site1.local:90"
+            class="block w-full h-full rounded-lg border border-gray-700 p-4 transition-all hover:border-[#C4203D] mt-4">
+            <p class="font-bold font-['Lexend'] text-xs text-white">Site 1 (HTTP)</p>
+            <p class="font-medium font-['Lexend'] text-xxxs text-gray-300 mt-2">Page publique</p>
+        </a>
+        <a href="http://site2.local:90"
+            class="block w-full h-full rounded-lg border border-gray-700 p-4 transition-all hover:border-[#C4203D] mt-4">
+            <p class="font-bold font-['Lexend'] text-xs text-white">Site 2 (HTTP → HTTPS)</p>
+            <p class="font-medium font-['Lexend'] text-xxxs text-gray-300 mt-2">Redirection vers HTTPS</p>
+        </a>
+        <a href="https://site2.local:446"
+            class="block w-full h-full rounded-lg border border-gray-700 p-4 transition-all hover:border-[#C4203D] mt-4">
+            <p class="font-bold font-['Lexend'] text-xs text-white">Site 2 (HTTPS sécurisé)</p>
+            <p class="font-medium font-['Lexend'] text-xxxs text-gray-300 mt-2">Auth (user1 / password123) + SSL
+                auto-signé</p>
+        </a>
+    </div>
+</body>
+
+</html>
