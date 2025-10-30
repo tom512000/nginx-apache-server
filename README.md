@@ -75,6 +75,7 @@ docker-compose down -v
 ### 🔹 Serveur Nginx
 | Type | URL | Détails |
 |------|-----|---------|
+| Accueil | http://localhost:90 | Liste des sites |
 | Site 1 (HTTP) | http://site1.local:90 | Page publique |
 | Site 2 (HTTP → HTTPS) | http://site2.local:90 | Redirection vers HTTPS |
 | Site 2 (HTTPS sécurisé) | https://site2.local:446 | Auth (user1 / password123) + SSL auto-signé |
@@ -82,6 +83,7 @@ docker-compose down -v
 ### 🔹 Serveur Apache
 | Type | URL | Détails |
 |------|-----|---------|
+| Accueil | http://localhost:91 | Liste des sites |
 | Site 1 (HTTP) | http://site1.local:91 | Page publique |
 | Site 2 (HTTP → HTTPS) | http://site2.local:91 | Redirection vers HTTPS |
 | Site 2 (HTTPS sécurisé) | https://site2.local:444 | Auth (user1 / password123) + SSL auto-signé |
