@@ -1,5 +1,4 @@
 version: "3.9"
-# user1/password123
 
 services:
   apache:
@@ -7,11 +6,13 @@ services:
     container_name: apache
     ports:
       - "91:80"
+      - "444:443"
     volumes:
       - ./apache/conf:/etc/apache2/sites-available
       - ./apache/sites:/var/www
       - ./apache/.htpasswd:/etc/apache2/.htpasswd
-      - ./init/setup_apache.sh:/docker-entrypoint-init.d/setup_apache.sh
+      - ./apache/ssl:/etc/ssl
+      - ./init:/docker-entrypoint-init.d
     command: ["/bin/bash", "/docker-entrypoint-init.d/setup_apache.sh"]
     restart: unless-stopped
 
@@ -20,10 +21,12 @@ services:
     container_name: nginx
     ports:
       - "90:80"
+      - "446:443"
     volumes:
       - ./nginx/conf:/etc/nginx/conf.d
       - ./nginx/sites:/var/www
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd
-      - ./init/setup_nginx.sh:/docker-entrypoint-init.d/setup_nginx.sh
+      - ./nginx/ssl:/etc/ssl
+      - ./init:/docker-entrypoint-init.d
     command: ["/bin/bash", "/docker-entrypoint-init.d/setup_nginx.sh"]
     restart: unless-stopped
