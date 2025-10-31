@@ -10,7 +10,7 @@ if [ ! -f /etc/apache2/.htpasswd ]; then
     htpasswd -b -c /etc/apache2/.htpasswd user1 password123
 fi
 
-a2enmod rewrite headers ssl
+a2enmod rewrite headers ssl proxy proxy_http proxy_balancer lbmethod_byrequests cache cache_disk
 
 # désactiver d'abord les sites pour garantir un état propre
 for s in 000-default.conf site1.conf site2.conf; do

@@ -12,6 +12,7 @@ services:
       - ./apache/sites:/var/www
       - ./apache/.htpasswd:/etc/apache2/.htpasswd
       - ./apache/ssl:/etc/ssl
+      - ./apache/cache:/var/cache/apache2
       - ./init:/docker-entrypoint-init.d
     command: ["/bin/bash", "/docker-entrypoint-init.d/setup_apache.sh"]
     restart: unless-stopped
@@ -27,6 +28,7 @@ services:
       - ./nginx/sites:/var/www
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./nginx/ssl:/etc/ssl
+      - ./nginx/cache:/var/cache/nginx
       - ./init:/docker-entrypoint-init.d
     command: ["/bin/bash", "/docker-entrypoint-init.d/setup_nginx.sh"]
     restart: unless-stopped
