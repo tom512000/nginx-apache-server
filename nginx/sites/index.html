@@ -12,7 +12,7 @@
 </head>
 
 <body class="h-full flex justify-center items-center bg-gray-950">
-    <div class="flex flex-col ml-40">
+    <div class="flex flex-col">
         <h1 class=" text-5xl font-['Lexend'] font-bold text-white">
             Bienvenue sur
             <span class="text-[#C4203D]">Nginx</span>
@@ -20,7 +20,9 @@
         <a href="http://site1.local:90"
             class="block w-full h-full rounded-lg border border-gray-700 p-4 transition-all hover:border-[#C4203D] mt-4">
             <p class="font-bold font-['Lexend'] text-xs text-white">Site 1 (HTTP)</p>
-            <p class="font-medium font-['Lexend'] text-xxxs text-gray-300 mt-2">Page publique</p>
+            <p class="font-medium font-['Lexend'] text-xxxs text-gray-300 mt-2">
+                Page publique (Reverse Proxy + Cache)
+            </p>
         </a>
         <a href="http://site2.local:90"
             class="block w-full h-full rounded-lg border border-gray-700 p-4 transition-all hover:border-[#C4203D] mt-4">
