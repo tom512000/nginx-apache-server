@@ -9,6 +9,7 @@ services:
       - "444:443"
     volumes:
       - ./apache/conf:/etc/apache2/sites-available
+      - ./apache/conf/evasive.conf:/etc/apache2/mods-enabled/evasive.conf
       - ./apache/sites:/var/www
       - ./apache/.htpasswd:/etc/apache2/.htpasswd
       - ./apache/ssl:/etc/ssl
@@ -25,6 +26,7 @@ services:
       - "446:443"
     volumes:
       - ./nginx/conf:/etc/nginx/conf.d
+      - ./nginx/conf/antiddos.conf:/etc/nginx/conf.d/antiddos.conf
       - ./nginx/sites:/var/www
       - ./nginx/.htpasswd:/etc/nginx/.htpasswd
       - ./nginx/ssl:/etc/ssl

@@ -79,7 +79,7 @@ docker-compose down -v
 | Accueil | http://localhost:90 | Liste des sites |
 | Site 1 (HTTP) | http://site1.local:90 | Page publique (Reverse Proxy + Cache) |
 | Site 2 (HTTP → HTTPS) | http://site2.local:90 | Redirection vers HTTPS |
-| Site 2 (HTTPS sécurisé) | https://site2.local:446 | Auth (user1 / password123) + SSL auto-signé + Compression |
+| Site 2 (HTTPS sécurisé) | https://site2.local:446 | Auth (user1 / password123) + SSL auto-signé + Compression + Anti-DDoS |
 
 ### 🔹 Serveur Apache
 | Type | URL | Détails |
@@ -87,7 +87,7 @@ docker-compose down -v
 | Accueil | http://localhost:91 | Liste des sites |
 | Site 1 (HTTP) | http://site1.local:91 | Page publique (Reverse Proxy + Cache) |
 | Site 2 (HTTP → HTTPS) | http://site2.local:91 | Redirection vers HTTPS |
-| Site 2 (HTTPS sécurisé) | https://site2.local:444 | Auth (user1 / password123) + SSL auto-signé + Compression |
+| Site 2 (HTTPS sécurisé) | https://site2.local:444 | Auth (user1 / password123) + SSL auto-signé + Compression + Anti-DDoS |
 
 > ⚠️ Accepte les certificats auto-signés dans ton navigateur si besoin pour accéder aux sites HTTPS.
 
